@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var n = prompt('Enter the size of array ');
+        var arr = [];
+        var i;
+        
+            Array.prototype.insert = function (ele, pos) {
+                if (pos >= this.length) {
+                    this.push(ele) 
+                } else if (pos <= 0) {
+                    this.unshift(ele) 
+                } else { 
+                    for (let i = this.length; i >= pos; i--) {
+                        this[i] = this[i - 1];
+                    }
+                    this[pos] =ele;
+                }
+            }
+        
+        for (i = 0; i < n; i++) {
+            arr[i] = prompt('Enter the array elements');
+        }
+        var pos = prompt('Enter the position : ');
+        var ele = prompt('Enter the element : ');
+        document.write("Element is : " + ele + "<br>");
+        document.write("Position is : " + pos + "<br>");
+        document.write("Array elements are : " + arr + "<br>");
+        arr.insert(ele,pos);
+        document.write(arr);
+    </script>
+</body>
+
+</html>
