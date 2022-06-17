@@ -1,44 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .show {display: block;}
+        .drop-content {
+            display: none;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            display: block;
+        }
+
+        .show {
+            display: block;
+        }
     </style>
 </head>
+
 <body>
-   <div class dropdown>
-    <button onclick="a()" class="btn">Dropdown</button>
-    <div id="drop">
-       <a href="#">charAt()</a>
-       <a href="#">slice()</a>
-       <a href="#">split()</a>
-       <a href="#">toLowerCase()</a>
-       <a href="#">toUpperCase()</a>
-       <a href="#">toString()</a>
-       <a href="#">indexOf()</a>
+    <div class dropdown>
+        <button onclick="a()" class="btn">Dropdown</button>
+        <div id="drop" class="drop-content">
+            <a href="#" onclick="sl()">slice()</a>
+            <a href="#" onclick="sp()">split()</a>
+            <a href="#" onclick="toLcase()">toLowerCase()</a>
+            <a href="#" onclick="toUcase()">toUpperCase()</a>
+            <a href="#" onclick="tostring()">toString()</a>
+            <a href="#" onclick="indexof()">indexOf()</a>
+        </div>
     </div>
-</div>
-       <script>
+    <div id="display"></div>
+    <script>
         function a() {
-          document.getElementById("drop").classList.toggle("show");
+            document.getElementById("drop").classList.toggle("show");
+        }
+
+        function sl(){
+            var str=prompt("Enter the str");
+            var a=prompt("Enter the start point");
+            var b=prompt("Enter end point");
+            var s=str.slice(a,b);
+            document.write(s);
+        }
+        function sp(){
+            var str=prompt("Enter the str");
+            var s1=str.split(" ");
+            var s2=str.split("");
+            document.write(s1);
+            document.write("<br>");
+            document.write(s2);
+        }
+       
+        // toLcase("VIDYASHREE");
+        function toLcase(){
+            var str=prompt("Enter the str");
+            var s=str.toLowerCase();
+            document.write(s);
+        }
+
+        function toUcase(){
+            var str=prompt("Enter the str");
+            var s=str.toUpperCase();
+            document.write(s);
+        }
+
+        function tostring(){
+            var str=prompt("Enter number");
+            var s=str.toString();
+            document.write(s);
         }
         
-        window.onclick = function(event) {
-          if (!event.target.matches('.btn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-              var openDropdown = dropdowns[i];
-              if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-              }
-            }
-          }
+        function indexof(){
+            var str=prompt("Enter the sentance");
+            var index=prompt("enter the word to get index");
+            var s=str.indexOf(index);
+            document.write(s);
         }
-        </script>
+
+    </script>
 </body>
+
 </html>
