@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function addzero(cow,chicken){
+            var n1=String(cow);
+            while(n1.length<3)
+            n1="0"+n1;
+            document.write(n1+" Cows");
+
+            document.write("<br>");
+
+            var n2=String(chicken);
+            while(n2.length<3)
+            n2="0"+n2;
+            document.write(n2+" Chickens");
+
+        }
+
+        addzero(7,11);
+    </script>
+</body>
+</html>
