@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function uniquechar(s)
+        {
+            var unique="";
+            for(var i=0;i<=s.length;i++)
+            {
+                if(unique.indexOf(s.charAt(i))==-1)
+                unique=unique+s[i];
+            }
+            document.write(unique);
+        }
+
+        var string=prompt("Enter the string");
+        uniquechar(string);
+    </script>
+</body>
+</html>
