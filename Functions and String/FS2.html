@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let sumeven = (arrint) => {
+            let sum = 0;
+            for (let i = 0; i < lenint; i++) {
+                if (arrint[i] % 2 == 0) {
+                    sum = sum + arrint[i];
+                    
+                }
+            }
+            alert(sum);
+        }
+
+        let n = prompt('Enter the size');
+        let lenint=parseInt(n)
+        let arr = [];
+        let arrint = [];
+        for (let i = 0; i < lenint; i++) {
+            arr[i] = prompt("Enter the array elelments");
+        }
+
+        for (let j = 0; j < lenint; j++) {
+            arrint[j] = parseInt(arr[j]);
+        }
+        sumeven(arrint)
+
+
+
+    </script>
+</body>
+
+</html>

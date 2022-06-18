@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let f1=()=>{
+            var str=prompt("Enter the string");
+            if(str[0]>="a" && str[0]<="z")
+            {
+                // document.write(str)
+                let a=str.charCodeAt(0)-97;
+                // document.write(a) 
+                document.write("After updating : "+String.fromCharCode(65+a)+str.slice(1));
+            }
+            else document.write("After updating : "+str);
+        }
+
+        function f2()
+        {
+            var str=prompt("Enter the string");
+            var pos=prompt("Enter the position");
+            var insertstr=prompt("Insert the string");
+            document.write("After updating : "+str.slice(0,pos-1)+ insertstr+str.slice((pos-1)));
+        }
+
+
+        function f3()
+        {
+            var str=prompt("Enter the string");
+            for(let i=0;i<str.length;i++)
+            {
+                if(!(str[i]>="A" && str[i]>="Z") && !(str[i]>="a" && str[i]>="z"))
+                {
+                    document.write("Not a string");
+                    return 
+                }
+            }
+            document.write("It is a string");
+        }
+
+
+        function f4()
+        {
+            var str=prompt("Enter the string");
+            var arr=str.split(" ");
+            document.write("After splitting :"+arr);
+        }
+        f1();
+        f2();
+        f3();
+        f4();
+    </script>
+</body>
+</html>
